@@ -1,0 +1,75 @@
+.draggable-elememts{
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+
+.draggable-elememts img{
+    width: 20%;
+}
+  .draggable:hover {
+    opacity: 0.5;
+  }
+
+  .empty {
+    height: 6rem;
+    width: 6rem;
+    margin: 2rem;
+    justify-content: center;
+    background-color: #333;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+    z-index:999;
+  }
+
+
+  
+  /* .empty1 {
+    height: 6rem;
+    width: 6rem;
+    margin-right: 100px;
+    justify-content: center;
+    background-color: #333;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+    z-index:999;
+   
+  }
+   */
+section{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+      
+}
+
+section img{
+    max-width: 6rem;
+}
+  .container{
+      width: 50rem;
+      display: flex;
+      align-items: center;
+    justify-content: center;
+    background-image: url("../img/test3.jpg");
+  }
+
+  .empty.empty-hover{
+    transform: scale(1.1);
+    opacity: 0.1;
+  }
+
+  .empty.dropped{
+    border-style: solid;
+    color: #666
+  }
+
+.draggable.dragged{
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+.draggable.dragged:hover{
+    opacity: 0.1;
+}

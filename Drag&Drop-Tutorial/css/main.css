@@ -31,21 +31,25 @@
   .droppable {
     height: 6.5rem;
     width: 6.5rem;
-    margin: 1rem auto;
-    display: flex;
+    margin: auto;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
     background-color: #fff;
     border: 3px dashed #111;
     transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+   
   }
   .droppable span {
     font-size: 1.25rem;
     pointer-events: none; /* The element is never the target of pointer events */
+  }
+
+  .droppable-elements{
+    display: flex;
+
   }
   
   /* Drag and Drop Related Styling */
