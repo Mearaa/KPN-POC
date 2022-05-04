@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
+
 <body>
 
-    <canvas id = "chart" width ="400" height ="200"></canvas>
-    <script>
-
-
-fetchJSON();
-  const ctx = document.getElementById('chart').getContext('2d');
-  const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [],
-      datasets: [
-        {
-          label: 'Temperature in °C',
-          data: [12, 19, 3, 5, 2, 3],
+  <canvas id="chart" width="400" height="200"></canvas>
+  <script>
+    fetchJSON();
+    const ctx = document.getElementById('chart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [".",".",".","."],
+        datasets: [{
+          label: 'Test',
+          data: [0, 0, 0, 0,],
           fill: false,
           borderColor: 'rgba(255, 99, 132, 1)',
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
           borderWidth: 1
-        }
-      ]
-    },
-    options: {}
-  });
+        }]
+      },
+      options: {}
+    });
+
+    async function fetchJSON() {
+      const response = await fetch('test.json');
+      const datapoints = await response.json();
+      console.log(datapoints);
+      return datapoints;
+
+    }
+
+    fetchJSON().then(datapoints => {
+      const year = datapoints.testData.map(function (index) {
+        return index.year;
+        console.log(year);
+      });
+      myChart.config.data.labels = year;
+      myChart.update();
+    });
+
+    fetchJSON().then(datapoints => {
+      const temp = datapoints.testData.map(function (index) {
+        return index.temp;
+        console.log(temp);
+      });
+      myChart.config.data.datasets[0].data = temp;
+      myChart.update();
+    });
 
 
-
-
-
-async function fetchJSON(){
-  const response = await fetch('test.json');
-  const datapoints = await response.json();
-  console.log(datapoints);
-  return datapoints;
-
-}
-
-fetchJSON().then(datapoints =>{
-  const year = datapoints.testData.map(function(index){
-    return index.year;
-    console.log(year);
-    
-  });
-
-  myChart.config.data.labels = year;
-  myChart.update();
-
-});
-
-
-//async function getData() {
-        // const response = await fetch('testdata.csv');
-      //   const response = await fetch('ZonAnn.Ts+dSST.csv');
-      //   const data = await response.text();
-      //   const years = [];
-      //   const temps = [];
-      //   const rows = data.split('\n').slice(1);
-      //   rows.forEach(row => {
-      //     const cols = row.split(',');
-      //     years.push(cols[0]);
-      //     temps.push((cols[1]));
-      //   });
-      //   return { years, temps };
-     // }
-       
-    </script>
+    //async function getData() {
+    // const response = await fetch('testdata.csv');
+    //   const response = await fetch('ZonAnn.Ts+dSST.csv');
+    //   const data = await response.text();
+    //   const years = [];
+    //   const temps = [];
+    //   const rows = data.split('\n').slice(1);
+    //   rows.forEach(row => {
+    //     const cols = row.split(',');
+    //     years.push(cols[0]);
+    //     temps.push((cols[1]));
+    //   });
+    //   return { years, temps };
+    // }
+  </script>
 </body>
+
 </html>
