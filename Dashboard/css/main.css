@@ -1,0 +1,74 @@
+/*///////////////////////////////////////////////// Initialize. Fonts en generieke settings ///////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: "KPN Metric";
+    src: url("../fonts/KPNMetric-Black.otf") format("embedded-opentype");
+    src: url("../fonts/KPNMetric-Bold.otf") format("embedded-opentype");
+    src: url("../fonts/KPNMetric-Light.otf") format("embedded-opentype");
+    src: url("../fonts/KPNMetric-Regular.otf") format("embedded-opentype");
+    src: url("../fonts/KPNMetric-SemiBold.otf") format("embedded-opentype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "KPN Metric", sans-serif;
+}
+/*////////////////////////////////////////////////////////////////HEADER////////////////////////////////////////////////////////////////////////*/
+
+.topbar{
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 3.75rem;
+    padding: 0 20px;
+    display:grid;
+    grid-template-columns: 1fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo h2{
+    color: #00c300;
+}
+
+.search{
+    position: relative;
+    width: 50%;
+    justify-self: center;
+}
+
+.search input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    border:none;
+    border-radius: 0.75rem;
+    background-color:#e2e2e2;
+}
+
+.search i{
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    cursor: pointer;
+}
+.user{
+    position: relative; 
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+
+/*//////////////////////////////////////////////////////////////////////SIDEBAR//////////////////////////////////////////////////////////////////////////*
