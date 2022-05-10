@@ -8,7 +8,6 @@
   <title>Test</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
-
 <body>
 
   <canvas id="chart" width="400" height="200"></canvas>
@@ -36,7 +35,6 @@
       const datapoints = await response.json();
       console.log(datapoints);
       return datapoints;
-
     }
 
     fetchJSON().then(datapoints => {
@@ -56,8 +54,6 @@
       myChart.config.data.datasets[0].data = temp;
       myChart.update();
     });
-
-
     //async function getData() {
     // const response = await fetch('testdata.csv');
     //   const response = await fetch('ZonAnn.Ts+dSST.csv');

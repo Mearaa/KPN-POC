@@ -1,0 +1,33 @@
+{
+    "chartdata":[{
+        "week": "week 1",
+        "csat": 80 
+    },
+    {
+        "week": "week 2",
+        "csat":75
+    },
+    {
+        "week": "week 3",
+        "csat": 50
+    },  {
+        "week": "week 4",
+        "csat": 85
+    },
+    {
+        "week": "week 5",
+        "csat":90
+    },
+    {
+        "week": "week 6",
+        "csat": 75
+    },
+    {
+        "week": "week 7",
+        "csat": 100
+    },
+    {
+        "week": "week 8",
+        "csat": 80
+    }]
+}
