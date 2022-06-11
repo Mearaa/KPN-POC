@@ -181,3 +181,10 @@ color: #009900;
     box-shadow: 0 7px 25px 0 rgba(0,0,0,0.08);
     width: 100%;
 }
+.chart2{
+    background-image: url(../img/123.png);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 7px 25px 0 rgba(0,0,0,0.08);
+    width: 100%;
+}
