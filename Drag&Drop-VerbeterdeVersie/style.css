@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 1000px;
+  position: relative;
+  margin: 80px auto;
+  /* display: flex; */
+  /* flex-direction: columns; */
+}
+.connections {
+  display: flex;
+  justify-content: center;
+}
+.wire {
+  width: 55px;
+  height: 490px;
+}
+.dragging {
+  opacity: 0.5;
+}
+.dropwires {
+  padding: 55px 0px 0px 0px;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.modem {
+  z-index: -1;
+  position: absolute;
+  width: 1000px;
+}
+.contain {
+  width: 56px;
+  height: 70px;
+  /* background-color: black; */
+}
+.grey {
+  margin: 0px 53.8px 0px 83px;
+  width: 56px;
+}
+.box2 {
+  width: 127px;
+  display: flex;
+  margin: 0px 63px 0px 0px;
+  justify-content: space-between;
+}
+.box {
+  width: 256px;
+  /* justify-content: space-e; */
+  margin: 0px 15px 0px 0px;
+  display: flex;
+}
+.box .contain {
+  width: 55.5px;
+  margin: 0px 0px 0px 5px;
+}
+.red {
+  width: 65px;
+  margin: -1px 39px 0px 0px;
+}
+.black {
+  width: 39px;
+}
+.totalscore {
+  text-align: center;
+  font-size: 50px;
+}
+.message {
+  width: 60%;
+  height: 36px;
+  margin: 0 auto;
+  background: #48a762;
+  color: white;
+  font-size: 25px;
+  padding: 5px 0px 0px 0px;
+  text-align: center;
+}
+#reset {
+  width: 100px;
+  background: #f6f66b;
+  margin: 15px auto;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 10px;
+}
+.green {
+  margin: -3px 0px 0px 0px !important;
+}
