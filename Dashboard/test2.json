@@ -1,33 +1,33 @@
 {
     "chartdata":[{
         "week": "week 1",
-        "csat": 80 
+        "groei": 10 
     },
     {
         "week": "week 2",
-        "csat":75
+        "groei":25
     },
     {
         "week": "week 3",
-        "csat": 50
+        "groei": 30
     },  {
         "week": "week 4",
-        "csat": 85
+        "groei": 50
     },
     {
         "week": "week 5",
-        "csat":90
+        "groei":50
     },
     {
         "week": "week 6",
-        "csat": 75
+        "groei": 65
     },
     {
         "week": "week 7",
-        "csat": 100
+        "groei": 65
     },
     {
         "week": "week 8",
-        "csat": 80
+        "groei": 75
     }]
 }

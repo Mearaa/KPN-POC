@@ -75,7 +75,7 @@ if (document.querySelector(".connections").length == 0) {
   score = document.getElementById("totalscore");
   score.innerHTML = total_score;
 }
-// Each container will check if it has its rightful child
+// Iedere container checkt of de juiste kabel erin zit. 
 
 yellow.addEventListener("dragend", (event) => {
   const t = yellow.children;
