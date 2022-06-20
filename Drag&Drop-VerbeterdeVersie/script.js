@@ -34,7 +34,7 @@ rest.addEventListener("click", () => {
   });
 });
 
-// For dragging wires
+// voor dragging kabels
 draggables.forEach((draggable) => {
   //console.log(draggables.length); // testing 
   score.innerHTML = total_score;
@@ -60,7 +60,7 @@ draggables.forEach((draggable) => {
     }
   });
 });
-// Voegt de wires toe aan de containers. 
+// Voegt de class dragging toe aan de wires als ze gedragged worden. 
 contains.forEach((contain) => {
   contain.addEventListener("dragover", (e) => {
     e.preventDefault();

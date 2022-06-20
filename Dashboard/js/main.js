@@ -17,9 +17,6 @@ fetchJSON2().then(datapoints => {
       document.getElementById("number3").innerHTML ="#"+ id[id.length-1]; // Voegt in de html met id number3 het laatste id ranking op. 
     const klanten = datapoints.testData.map(testData => testData.klanten).reduce((test, testData) => testData + test); // haalt alles van het eerste getal in de array, vervolgens telt hij alles weer bij elkaar op.
     document.getElementById("number1").innerHTML = klanten; // voegt de aantal klanten toe in de html met id number1
-
-    // const klanten = datapoints.testData.map(function (index) {
-    //   return index.klanten;
 });
 // document.getElementById("number1").innerHTML = klanten[2];
 
