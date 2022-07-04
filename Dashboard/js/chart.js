@@ -112,8 +112,8 @@ fetchJSON().then(data => {
 
 fetchJSON().then(data => {
     const groei = data.chartdata.map(function (index) {
-        return index.groei;
+        return index.groei; // Zoekt in de chartdata van de test2.json en pakt de groei
     });
-    myChart.config.data.datasets[0].data = groei;
+    myChart.config.data.datasets[0].data = groei; // Voegt de groei toe in de dataset van de chart. 
     myChart.update();
 });

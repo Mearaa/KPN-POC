@@ -77,32 +77,37 @@ if (document.querySelector(".connections").length == 0) {
 }
 // Iedere container checkt of de juiste kabel erin zit. 
 
-yellow.addEventListener("dragend", (event) => {
-  const t = yellow.children;
-  event.preventDefault();
-  if (t[0].id == "yellow") {
-    return;
-  } else {
-    total_score = total_score - 10;
-    score.innerHTML = total_score;
-  }
-});
+yellow.forEach((item) =>
+  item.addEventListener("dragend", (event) => {
+    const t = item.children;
+    console.log(t);
+    event.preventDefault();
+    console.log(t[0].id);
+    if (t[0].id == "yellow") {
+      return;
+    } else {
+      // if not then score will be deducted
+      total_score = total_score - 10;
+      score.innerHTML = total_score;
+    }
+  })
+);
 
 // Deze reeks controleerd of de juist gekleurde kabel in de juist gekleurde poort zit. Zoniet dan gaat er 10 punten van de score af. 
 
-// green.forEach((item) => {
-//   item.addEventListener("dragend", (event) => {
-//     const t = item.children;
-//     event.preventDefault();
-//    // console.log(t[0].id);
-//     if (t[0].id == "green") {
-//       return;
-//     } else {
-//       total_score = total_score - 10;
-//       score.innerHTML = total_score;
-//     }
-//   });
-// });
+green.forEach((item) => {
+  item.addEventListener("dragend", (event) => {
+    const t = item.children;
+    event.preventDefault();
+   // console.log(t[0].id);
+    if (t[0].id == "green") {
+      return;
+    } else {
+      total_score = total_score - 10;
+      score.innerHTML = total_score;
+    }
+  });
+});
 
 green.addEventListener("dragend", (event) => {
   const t = green.children;
